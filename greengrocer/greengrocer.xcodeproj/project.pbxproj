@@ -18,6 +18,7 @@
 		EF657437218E472C0073378F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF657435218E472C0073378F /* LaunchScreen.storyboard */; };
 		EF657442218E472C0073378F /* greengrocerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF657441218E472C0073378F /* greengrocerTests.swift */; };
 		EF65744D218E472C0073378F /* greengrocerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65744C218E472C0073378F /* greengrocerUITests.swift */; };
+		EF65745B218E4EEF0073378F /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65745A218E4EEF0073378F /* IntroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		EF657448218E472C0073378F /* greengrocerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = greengrocerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF65744C218E472C0073378F /* greengrocerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = greengrocerUITests.swift; sourceTree = "<group>"; };
 		EF65744E218E472C0073378F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF65745A218E4EEF0073378F /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		FA6A4954597D9F9E866A915B /* Pods-greengrocerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-greengrocerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-greengrocerUITests/Pods-greengrocerUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 				EF65742A218E472C0073378F /* AppDelegate.swift */,
 				EF65742C218E472C0073378F /* FirstViewController.swift */,
 				EF65742E218E472C0073378F /* SecondViewController.swift */,
+				EF65745A218E4EEF0073378F /* IntroViewController.swift */,
 				EF657430218E472C0073378F /* Main.storyboard */,
 				EF657433218E472C0073378F /* Assets.xcassets */,
 				EF657435218E472C0073378F /* LaunchScreen.storyboard */,
@@ -306,15 +309,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-greengrocerTests-checkManifestLockResult.txt",
 			);
@@ -328,15 +327,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-greengrocerUITests-checkManifestLockResult.txt",
 			);
@@ -350,15 +345,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-greengrocer-checkManifestLockResult.txt",
 			);
@@ -377,6 +368,7 @@
 				EF65742F218E472C0073378F /* SecondViewController.swift in Sources */,
 				EF65742B218E472C0073378F /* AppDelegate.swift in Sources */,
 				EF65742D218E472C0073378F /* FirstViewController.swift in Sources */,
+				EF65745B218E4EEF0073378F /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
