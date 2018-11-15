@@ -1,6 +1,6 @@
 # GreenGrocer
 A Fridge management app for housemates. <br>
-Created during CalHacks 5.0 by Annie Zhang, Jessica Meng, Edward Huang, and Michelle Xu. <br>
+Created during CalHacks 5.0 by Annie Zhang, Jessica Meng, Edward Hwang, and Michelle Xu. <br>
 Currently under development as of November 2018. <br>
 
 GreenGrocer is an all-in-one app for housemates and roommates to manage groceries and fridge storage. Keep track of your current inventory, mark items as either personal or shared, and never be stuck wondering if you have enough ingredients at home or not! <br>
