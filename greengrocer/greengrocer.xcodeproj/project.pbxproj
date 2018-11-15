@@ -10,8 +10,14 @@
 		0AE894A72E21847947DEB918 /* Pods_greengrocerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751156FB254EABFA5816A6BB /* Pods_greengrocerUITests.framework */; };
 		289B7BE8302BA5CCDACD4CC7 /* Pods_greengrocerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD35BA4972F41D3650CB934E /* Pods_greengrocerTests.framework */; };
 		CA2FEAF62CB328454DBACB9C /* Pods_greengrocer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DECE121A0CF18E43943D74A /* Pods_greengrocer.framework */; };
+		EF30EA1A2193E4C600565AC5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30EA192193E4C600565AC5 /* LoginViewController.swift */; };
+		EF30EA262193F2A100565AC5 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30EA242193F2A100565AC5 /* TextFieldEffects.swift */; };
+		EF30EA292193F2ED00565AC5 /* YoshikoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30EA282193F2ED00565AC5 /* YoshikoTextField.swift */; };
+		EF30EA2B2193F33E00565AC5 /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30EA2A2193F33E00565AC5 /* KaedeTextField.swift */; };
+		EF30EA2D219908CC00565AC5 /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30EA2C219908CC00565AC5 /* BudgetViewController.swift */; };
+		EF5E8B43219CF8AE009E66C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5E8B42219CF8AE009E66C9 /* SignUpViewController.swift */; };
+		EF5E8B45219D1F51009E66C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF5E8B44219D1F51009E66C9 /* GoogleService-Info.plist */; };
 		EF65742B218E472C0073378F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65742A218E472C0073378F /* AppDelegate.swift */; };
-		EF65742D218E472C0073378F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65742C218E472C0073378F /* FirstViewController.swift */; };
 		EF65742F218E472C0073378F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65742E218E472C0073378F /* SecondViewController.swift */; };
 		EF657432218E472C0073378F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF657430218E472C0073378F /* Main.storyboard */; };
 		EF657434218E472C0073378F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF657433218E472C0073378F /* Assets.xcassets */; };
@@ -19,6 +25,13 @@
 		EF657442218E472C0073378F /* greengrocerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF657441218E472C0073378F /* greengrocerTests.swift */; };
 		EF65744D218E472C0073378F /* greengrocerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65744C218E472C0073378F /* greengrocerUITests.swift */; };
 		EF65745B218E4EEF0073378F /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65745A218E4EEF0073378F /* IntroViewController.swift */; };
+		EF73C1E3219CC077001527F9 /* OneCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF73C1E2219CC077001527F9 /* OneCategoryViewController.swift */; };
+		EF73C1E5219CCB24001527F9 /* OneCategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF73C1E4219CCB24001527F9 /* OneCategoryViewCell.swift */; };
+		EFA419AA218E5812006B40BD /* FoodGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA419A9218E5812006B40BD /* FoodGroupViewController.swift */; };
+		EFA419AC218E5B85006B40BD /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA419AB218E5B85006B40BD /* Food.swift */; };
+		EFA419AE218E5D88006B40BD /* FoodDicts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA419AD218E5D88006B40BD /* FoodDicts.swift */; };
+		EFA419B0218E5EA8006B40BD /* FoodGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA419AF218E5EA8006B40BD /* FoodGroupCollectionViewCell.swift */; };
+		EFA419B2218EA0A6006B40BD /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA419B1218EA0A6006B40BD /* AddFoodViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +60,16 @@
 		9CE7EF8F91A593099F2A1D75 /* Pods-greengrocer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-greengrocer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-greengrocer/Pods-greengrocer.debug.xcconfig"; sourceTree = "<group>"; };
 		A081389EF6E82C029740B50C /* Pods-greengrocerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-greengrocerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-greengrocerUITests/Pods-greengrocerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD35BA4972F41D3650CB934E /* Pods_greengrocerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_greengrocerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF30EA192193E4C600565AC5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EF30EA232193F2A100565AC5 /* TextFieldEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEffects.h; sourceTree = "<group>"; };
+		EF30EA242193F2A100565AC5 /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
+		EF30EA282193F2ED00565AC5 /* YoshikoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoshikoTextField.swift; sourceTree = "<group>"; };
+		EF30EA2A2193F33E00565AC5 /* KaedeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaedeTextField.swift; sourceTree = "<group>"; };
+		EF30EA2C219908CC00565AC5 /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
+		EF5E8B42219CF8AE009E66C9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		EF5E8B44219D1F51009E66C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF657427218E472C0073378F /* greengrocer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = greengrocer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF65742A218E472C0073378F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF65742C218E472C0073378F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		EF65742E218E472C0073378F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		EF657431218E472C0073378F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF657433218E472C0073378F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +82,13 @@
 		EF65744C218E472C0073378F /* greengrocerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = greengrocerUITests.swift; sourceTree = "<group>"; };
 		EF65744E218E472C0073378F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF65745A218E4EEF0073378F /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		EF73C1E2219CC077001527F9 /* OneCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCategoryViewController.swift; sourceTree = "<group>"; };
+		EF73C1E4219CCB24001527F9 /* OneCategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCategoryViewCell.swift; sourceTree = "<group>"; };
+		EFA419A9218E5812006B40BD /* FoodGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodGroupViewController.swift; sourceTree = "<group>"; };
+		EFA419AB218E5B85006B40BD /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		EFA419AD218E5D88006B40BD /* FoodDicts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDicts.swift; sourceTree = "<group>"; };
+		EFA419AF218E5EA8006B40BD /* FoodGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodGroupCollectionViewCell.swift; sourceTree = "<group>"; };
+		EFA419B1218EA0A6006B40BD /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
 		FA6A4954597D9F9E866A915B /* Pods-greengrocerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-greengrocerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-greengrocerUITests/Pods-greengrocerUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +143,50 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EF30EA1B2193F1AE00565AC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EFA419AD218E5D88006B40BD /* FoodDicts.swift */,
+				EFA419AB218E5B85006B40BD /* Food.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF30EA1C2193F1C300565AC5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF30EA192193E4C600565AC5 /* LoginViewController.swift */,
+				EF5E8B42219CF8AE009E66C9 /* SignUpViewController.swift */,
+				EF65745A218E4EEF0073378F /* IntroViewController.swift */,
+				EFA419A9218E5812006B40BD /* FoodGroupViewController.swift */,
+				EF73C1E2219CC077001527F9 /* OneCategoryViewController.swift */,
+				EF65742E218E472C0073378F /* SecondViewController.swift */,
+				EFA419B1218EA0A6006B40BD /* AddFoodViewController.swift */,
+				EF30EA2C219908CC00565AC5 /* BudgetViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EF30EA1D2193F1DF00565AC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF73C1E4219CCB24001527F9 /* OneCategoryViewCell.swift */,
+				EFA419AF218E5EA8006B40BD /* FoodGroupCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF30EA222193F22D00565AC5 /* Text Field Effects */ = {
+			isa = PBXGroup;
+			children = (
+				EF30EA232193F2A100565AC5 /* TextFieldEffects.h */,
+				EF30EA242193F2A100565AC5 /* TextFieldEffects.swift */,
+				EF30EA282193F2ED00565AC5 /* YoshikoTextField.swift */,
+				EF30EA2A2193F33E00565AC5 /* KaedeTextField.swift */,
+			);
+			path = "Text Field Effects";
+			sourceTree = "<group>";
+		};
 		EF65741E218E472C0073378F = {
 			isa = PBXGroup;
 			children = (
@@ -142,13 +213,15 @@
 			isa = PBXGroup;
 			children = (
 				EF65742A218E472C0073378F /* AppDelegate.swift */,
-				EF65742C218E472C0073378F /* FirstViewController.swift */,
-				EF65742E218E472C0073378F /* SecondViewController.swift */,
-				EF65745A218E4EEF0073378F /* IntroViewController.swift */,
+				EF30EA1B2193F1AE00565AC5 /* Model */,
+				EF30EA1D2193F1DF00565AC5 /* View */,
+				EF30EA1C2193F1C300565AC5 /* Controllers */,
 				EF657430218E472C0073378F /* Main.storyboard */,
 				EF657433218E472C0073378F /* Assets.xcassets */,
 				EF657435218E472C0073378F /* LaunchScreen.storyboard */,
 				EF657438218E472C0073378F /* Info.plist */,
+				EF5E8B44219D1F51009E66C9 /* GoogleService-Info.plist */,
+				EF30EA222193F22D00565AC5 /* Text Field Effects */,
 			);
 			path = greengrocer;
 			sourceTree = "<group>";
@@ -182,6 +255,7 @@
 				EF657423218E472C0073378F /* Sources */,
 				EF657424218E472C0073378F /* Frameworks */,
 				EF657425218E472C0073378F /* Resources */,
+				5E799F246BACAFAC1C169B67 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,7 +311,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Annie Zhang";
 				TargetAttributes = {
 					EF657426218E472C0073378F = {
@@ -282,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF657437218E472C0073378F /* LaunchScreen.storyboard in Resources */,
+				EF5E8B45219D1F51009E66C9 /* GoogleService-Info.plist in Resources */,
 				EF657434218E472C0073378F /* Assets.xcassets in Resources */,
 				EF657432218E472C0073378F /* Main.storyboard in Resources */,
 			);
@@ -320,6 +395,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E799F246BACAFAC1C169B67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-greengrocer/Pods-greengrocer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/MGSwipeTableCell/MGSwipeTableCell.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGSwipeTableCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-greengrocer/Pods-greengrocer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8F94F6C55F43BD44618AC076 /* [CP] Check Pods Manifest.lock */ = {
@@ -365,9 +474,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF30EA1A2193E4C600565AC5 /* LoginViewController.swift in Sources */,
+				EF73C1E3219CC077001527F9 /* OneCategoryViewController.swift in Sources */,
+				EF73C1E5219CCB24001527F9 /* OneCategoryViewCell.swift in Sources */,
 				EF65742F218E472C0073378F /* SecondViewController.swift in Sources */,
+				EF30EA2B2193F33E00565AC5 /* KaedeTextField.swift in Sources */,
+				EF30EA262193F2A100565AC5 /* TextFieldEffects.swift in Sources */,
+				EF30EA292193F2ED00565AC5 /* YoshikoTextField.swift in Sources */,
+				EF30EA2D219908CC00565AC5 /* BudgetViewController.swift in Sources */,
 				EF65742B218E472C0073378F /* AppDelegate.swift in Sources */,
-				EF65742D218E472C0073378F /* FirstViewController.swift in Sources */,
+				EFA419B0218E5EA8006B40BD /* FoodGroupCollectionViewCell.swift in Sources */,
+				EF5E8B43219CF8AE009E66C9 /* SignUpViewController.swift in Sources */,
+				EFA419AC218E5B85006B40BD /* Food.swift in Sources */,
+				EFA419AE218E5D88006B40BD /* FoodDicts.swift in Sources */,
+				EFA419AA218E5812006B40BD /* FoodGroupViewController.swift in Sources */,
+				EFA419B2218EA0A6006B40BD /* AddFoodViewController.swift in Sources */,
 				EF65745B218E4EEF0073378F /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +558,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -444,6 +566,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -494,6 +617,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -501,6 +625,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -538,7 +663,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = greengrocer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Annie-Zhang.greengrocer";
+				PRODUCT_BUNDLE_IDENTIFIER = AnnieZhang.greengrocer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -553,7 +678,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = greengrocer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Annie-Zhang.greengrocer";
+				PRODUCT_BUNDLE_IDENTIFIER = AnnieZhang.greengrocer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

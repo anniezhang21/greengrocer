@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "84506EE054E21CB3F80F1116C3E70308"
+               BlueprintIdentifier = "1D94A6EC9235451A8C9E817B0E1A4DFF"
                BuildableName = "Pods_greengrocer.framework"
                BlueprintName = "Pods-greengrocer"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -37,7 +36,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "84506EE054E21CB3F80F1116C3E70308"
+            BlueprintIdentifier = "1D94A6EC9235451A8C9E817B0E1A4DFF"
             BuildableName = "Pods_greengrocer.framework"
             BlueprintName = "Pods-greengrocer"
             ReferencedContainer = "container:Pods.xcodeproj">
