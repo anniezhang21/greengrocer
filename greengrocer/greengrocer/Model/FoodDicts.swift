@@ -35,5 +35,5 @@ class FoodDicts {
             7: nil,
             ]
     
-    static var myFood: [Food] = []
+    static var myFood: [Food] = []    
 }

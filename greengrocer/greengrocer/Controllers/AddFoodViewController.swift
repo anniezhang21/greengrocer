@@ -7,16 +7,22 @@
 //
 
 import UIKit
+import CoreData
 
 class AddFoodViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    var newFood: Food = Food(category: "Grains", name: "ERROR", quantity: -1)
+    var newFood: Food = Food(category: "Grains", name: "ERROR", quantity: -1, price: -1)
     
     
     @IBOutlet weak var foodGroupPicker: UIPickerView!
+    
+    @IBOutlet weak var isShared: UISwitch!
+    
     @IBOutlet weak var foodGroupText: UITextField!
     @IBOutlet weak var itemNameText: UITextField!
     @IBOutlet weak var quantityText: UITextField!
+    @IBOutlet weak var priceText: UITextField!
+    
     @IBOutlet weak var openFridge: UIImageView!
     @IBOutlet weak var confirm: UIButton!
     
@@ -25,13 +31,40 @@ class AddFoodViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
     
     @IBAction func didPressConfirm(_ sender: Any) {
-        if let groupText = foodGroupText.text, let nameText = itemNameText.text, let quantText = quantityText.text {
-                    newFood = Food(category: groupText, name: nameText, quantity: Double(quantText) ?? 0)
-                    
-                    //TODO: replace with storage
-                    FoodDicts.myFood.append(newFood)
-                    print("new length: " + String(FoodDicts.myFood.count))
-                    dismiss(animated: true)
+        if let groupText = foodGroupText.text, let nameText = itemNameText.text, let quantText = quantityText.text, let pText = priceText.text {
+            newFood = Food(category: groupText, name: nameText, quantity: Double(quantText) ?? 0, price: Double(pText) ?? 0)
+            newFood.shared = isShared.isOn
+            newFood.dateAdded = Date.init()
+            FoodDicts.myFood.append(newFood)
+            if isShared.isOn {
+                // TODO: FireBase storage
+            } else {
+                // Local storage
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                let context =  appDelegate.persistentContainer.viewContext
+                
+                let pfood = SavedFood(context: context)
+                pfood.category = newFood.category
+                pfood.dateAdded = newFood.dateAdded
+                pfood.marked = newFood.marked
+                pfood.name = newFood.name
+                pfood.price = newFood.price
+                pfood.quantity = newFood.quantity
+                pfood.shared = newFood.shared
+                
+                appDelegate.saveContext()
+                
+                // Uncomment to clear all stored data
+//                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedFood")
+//                let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+//                
+//                do {
+//                    try context.execute(deleteRequest)
+//                } catch let error as NSError {
+//                    print(error)
+//                }
+            }
+            dismiss(animated: true)
         }
     }
     

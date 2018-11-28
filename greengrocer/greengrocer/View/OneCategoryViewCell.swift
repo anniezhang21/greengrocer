@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MGSwipeTableCell
 
-class OneCategoryViewCell: UITableViewCell {
+class OneCategoryViewCell: MGSwipeTableCell {
 
     @IBOutlet weak var number: UILabel!
     @IBOutlet weak var name: UILabel!

@@ -27,6 +27,7 @@
 		EF65745B218E4EEF0073378F /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65745A218E4EEF0073378F /* IntroViewController.swift */; };
 		EF73C1E3219CC077001527F9 /* OneCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF73C1E2219CC077001527F9 /* OneCategoryViewController.swift */; };
 		EF73C1E5219CCB24001527F9 /* OneCategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF73C1E4219CCB24001527F9 /* OneCategoryViewCell.swift */; };
+		EF85346C21AE8EB5002D599E /* greengrocer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF85346A21AE8EB5002D599E /* greengrocer.xcdatamodeld */; };
 		EFA419AA218E5812006B40BD /* FoodGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA419A9218E5812006B40BD /* FoodGroupViewController.swift */; };
 		EFA419AC218E5B85006B40BD /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA419AB218E5B85006B40BD /* Food.swift */; };
 		EFA419AE218E5D88006B40BD /* FoodDicts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA419AD218E5D88006B40BD /* FoodDicts.swift */; };
@@ -84,6 +85,7 @@
 		EF65745A218E4EEF0073378F /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		EF73C1E2219CC077001527F9 /* OneCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCategoryViewController.swift; sourceTree = "<group>"; };
 		EF73C1E4219CCB24001527F9 /* OneCategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCategoryViewCell.swift; sourceTree = "<group>"; };
+		EF85346B21AE8EB5002D599E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		EFA419A9218E5812006B40BD /* FoodGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodGroupViewController.swift; sourceTree = "<group>"; };
 		EFA419AB218E5B85006B40BD /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		EFA419AD218E5D88006B40BD /* FoodDicts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDicts.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		EF65741E218E472C0073378F = {
 			isa = PBXGroup;
 			children = (
+				EF85346A21AE8EB5002D599E /* greengrocer.xcdatamodeld */,
 				EF657429218E472C0073378F /* greengrocer */,
 				EF657440218E472C0073378F /* greengrocerTests */,
 				EF65744B218E472C0073378F /* greengrocerUITests */,
@@ -482,6 +485,7 @@
 				EF30EA262193F2A100565AC5 /* TextFieldEffects.swift in Sources */,
 				EF30EA292193F2ED00565AC5 /* YoshikoTextField.swift in Sources */,
 				EF30EA2D219908CC00565AC5 /* BudgetViewController.swift in Sources */,
+				EF85346C21AE8EB5002D599E /* greengrocer.xcdatamodeld in Sources */,
 				EF65742B218E472C0073378F /* AppDelegate.swift in Sources */,
 				EFA419B0218E5EA8006B40BD /* FoodGroupCollectionViewCell.swift in Sources */,
 				EF5E8B43219CF8AE009E66C9 /* SignUpViewController.swift in Sources */,
@@ -791,6 +795,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EF85346A21AE8EB5002D599E /* greengrocer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EF85346B21AE8EB5002D599E /* Model.xcdatamodel */,
+			);
+			currentVersion = EF85346B21AE8EB5002D599E /* Model.xcdatamodel */;
+			path = greengrocer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EF65741F218E472C0073378F /* Project object */;
 }

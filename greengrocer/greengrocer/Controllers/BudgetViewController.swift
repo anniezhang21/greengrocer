@@ -12,27 +12,30 @@ import Charts
 class BudgetViewViewController: UIViewController {
     @IBOutlet weak var pieChart: PieChartView!
     
-    var fruitsDataEntry = PieChartDataEntry (value:0, label:"Fruits")
-    var vegDataEntry = PieChartDataEntry (value:0, label:"Vegetables")
-    var grainsDataEntry = PieChartDataEntry (value:0, label:"Grains")
-    var proteinDataEntry = PieChartDataEntry (value:0, label:"Proteins")
-    var condimentsDataEntry = PieChartDataEntry (value:0, label:"Condiments")
-    var snacksDataEntry = PieChartDataEntry (value:0, label:"Snacks")
-    var otherDataEntry = PieChartDataEntry (value:0, label:"Other")
-    var dairyDataEntry = PieChartDataEntry(value:0, label:"Dairy")
+    var fruitsDataEntry = PieChartDataEntry (value:0, label:"")
+    var vegDataEntry = PieChartDataEntry (value:0, label:"")
+    var grainsDataEntry = PieChartDataEntry (value:0, label:"")
+    var proteinDataEntry = PieChartDataEntry (value:0, label:"")
+    var condimentsDataEntry = PieChartDataEntry (value:0, label:"")
+    var snacksDataEntry = PieChartDataEntry (value:0, label:"")
+    var otherDataEntry = PieChartDataEntry (value:0, label:"")
+    var dairyDataEntry = PieChartDataEntry(value:0, label:"")
     
     var totalDataEntries = [PieChartDataEntry]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pieChart.chartDescription?.text = nil
+        
         // Do any additional setup after loading the view.
         pieChart.chartDescription?.text = nil
         
         totalDataEntries=[fruitsDataEntry, vegDataEntry,grainsDataEntry, proteinDataEntry, condimentsDataEntry, snacksDataEntry, otherDataEntry, dairyDataEntry]
         
         updateValues()
-        updateChartData() //pie chart
+        updateChartData()
+        
+        pieChart.legend.enabled = false
+        pieChart.holeColor = nil
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -45,21 +48,29 @@ class BudgetViewViewController: UIViewController {
         for food in FoodDicts.myFood {
             if !food.marked {
                 if food.category == "Fruit" {
-                    self.fruitsDataEntry.value += food.quantity
+                    fruitsDataEntry.label = "Fruit"
+                    self.fruitsDataEntry.value += food.price
                 } else if food.category == "Grains" {
-                    self.grainsDataEntry.value += food.quantity
+                    grainsDataEntry.label = "Grains"
+                    self.grainsDataEntry.value += food.price
                 } else if food.category == "Protein" {
-                    self.proteinDataEntry.value += food.quantity
+                    proteinDataEntry.label = "Protein"
+                    self.proteinDataEntry.value += food.price
                 } else if food.category == "Snacks" {
-                    self.snacksDataEntry.value += food.quantity
+                    snacksDataEntry.label = "Snacks"
+                    self.snacksDataEntry.value += food.price
                 } else if food.category == "Condiments" {
-                    self.condimentsDataEntry.value += food.quantity
+                    condimentsDataEntry.label = "Condiments"
+                    self.condimentsDataEntry.value += food.price
                 } else if food.category == "Other" {
-                    self.otherDataEntry.value += food.quantity
+                    otherDataEntry.label = "Other"
+                    self.otherDataEntry.value += food.price
                 } else if food.category == "Vegetables" {
-                    self.vegDataEntry.value += food.quantity
+                    vegDataEntry.label = "Vegetables"
+                    self.vegDataEntry.value += food.price
                 } else if food.category == "Dairy" {
-                    self.dairyDataEntry.value += food.quantity
+                    dairyDataEntry.label = "Dairy"
+                    self.dairyDataEntry.value += food.price
                 }
                 food.marked = true
             }
@@ -68,14 +79,17 @@ class BudgetViewViewController: UIViewController {
     
     func updateChartData() {
         let chartDataSet = PieChartDataSet(values: totalDataEntries, label: nil)
+        
+        let noZeroFormatter = NumberFormatter()
+        noZeroFormatter.numberStyle = NumberFormatter.Style.currency
+        noZeroFormatter.zeroSymbol = ""
+        chartDataSet.valueFormatter = DefaultValueFormatter(formatter: noZeroFormatter)
+        
         let chartData = PieChartData(dataSet: chartDataSet)
-        chartDataSet.colors = ChartColorTemplates.vordiplom()
+        chartDataSet.colors = ChartColorTemplates.colorful()
         pieChart.data = chartData
         
     }
-    
-    
-    
     
     
     /*

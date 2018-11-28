@@ -32,7 +32,6 @@ class FoodGroupViewController: UIViewController, UICollectionViewDataSource, UIC
             groupCell.layer.cornerRadius = 5;
             // Add in image
             
-            print("casted successfully")
             groupCell.name.text = FoodDicts.categoryDict[indexPath.item]
             if let bgImage = FoodDicts.imageDict[indexPath.item] as? UIImage {
                 let View = UIView()

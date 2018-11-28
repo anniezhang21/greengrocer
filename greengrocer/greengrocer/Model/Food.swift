@@ -7,21 +7,24 @@
 //
 
 import Foundation
-@objc class Food: NSObject {
+class Food {
     
     var category: String
     var name: String
-    var quantity: Double
-    var dateAdded: NSDate = NSDate.init() // Default value, should be overwritten at time of addition.
-    var owner: String = ""
-    var shared: Bool = false
     
+    var quantity: Double
+    var price: Double
+    
+    var dateAdded: Date = Date.init() // Default value, should be overwritten at time of addition.
+    
+    var shared: Bool = false
     var marked: Bool = false
     
-    init(category:String, name: String, quantity: Double) {
+    init(category:String, name: String, quantity: Double, price: Double) {
         self.category = category
         self.name = name
         self.quantity = quantity
+        self.price = price
     }
     
     func increment() {
@@ -36,7 +39,8 @@ import Foundation
         self.quantity = 0
     }
     
+    // For firebase storage (data persistence)
     func dictRepr() {
-        return 
+        
     }
 }
