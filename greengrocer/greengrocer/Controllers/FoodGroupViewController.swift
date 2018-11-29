@@ -17,7 +17,7 @@ class FoodGroupViewController: UIViewController, UICollectionViewDataSource, UIC
     var filteredFoods: [Food] = []
 
     @IBAction func didPressViewAll(_ sender: UIButton) {
-        performSegue(withIdentifier: "goToCategory", sender: UIButton.self)
+        performSegue(withIdentifier: "goToAll", sender: UIButton.self)
     }
     @IBAction func didAddFood(_ sender: UIButton) {
         performSegue(withIdentifier: "toAddFood", sender: UIButton())
@@ -56,7 +56,11 @@ class FoodGroupViewController: UIViewController, UICollectionViewDataSource, UIC
     // need to send the type int somehow
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? OneCategoryViewController {
-            destinationVC.thisFoodGroup = self.groupToShow
+            if segue.identifier == "goToCategory" {
+                destinationVC.thisFoodGroup = self.groupToShow
+            } else if segue.identifier ==s "goToAll" {
+                destinationVC.thisFoodGroup = "All"
+            }
         }
     }
     

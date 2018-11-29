@@ -122,6 +122,7 @@
                         <outlet property="viewAll" destination="N4K-rb-NxH" id="xKL-Ii-rA8"/>
                         <segue destination="Zrz-3d-mLq" kind="show" identifier="goToCategory" id="qdf-vU-45m"/>
                         <segue destination="PWb-kH-osE" kind="presentation" identifier="toAddFood" id="EeD-Ei-YLj"/>
+                        <segue destination="Zrz-3d-mLq" kind="show" identifier="goToAll" id="7ZF-kf-Mlz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -763,7 +764,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RPO-wR-M6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1839" y="0.0"/>
+            <point key="canvasLocation" x="-1722" y="-383"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Om4-oi-WbZ">
@@ -934,7 +935,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mvm-Sa-Yie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1839" y="702"/>
+            <point key="canvasLocation" x="-1722" y="322"/>
         </scene>
     </scenes>
     <resources>
@@ -942,6 +943,7 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2re-tk-93X"/>
+        <segue reference="28e-gf-Czd"/>
+        <segue reference="7ZF-kf-Mlz"/>
     </inferredMetricsTieBreakers>
 </document>
