@@ -57,7 +57,7 @@ class AddFoodViewController: UIViewController, UIPickerViewDataSource, UIPickerV
                 // Uncomment to clear all stored data
 //                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedFood")
 //                let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-//                
+//
 //                do {
 //                    try context.execute(deleteRequest)
 //                } catch let error as NSError {
@@ -98,6 +98,7 @@ class AddFoodViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         foodGroupPicker.isHidden = true
         quantityText.keyboardType = UIKeyboardType.decimalPad
+//        priceText.keyboardType = UIKeyboardType.decimalPad
         
         openFridge.image = #imageLiteral(resourceName: "openfridge")
         

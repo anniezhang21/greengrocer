@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class FoodDicts {
+    static let housemates: [String: Int] = [:]
     
     static let categoryDict: [Int:String] =
         [

@@ -56,6 +56,7 @@ class OneCategoryViewController: UIViewController,  UITableViewDelegate, UITable
         let toRemove: Food = filteredFoodArray[(path as NSIndexPath).row]
         
         //TODO: Delete permanently from CoreData
+        
         filteredFoodArray.remove(at: (path as NSIndexPath).row);
         FoodDicts.myFood = FoodDicts.myFood.filter {$0.dateAdded != toRemove.dateAdded }
         allFoods = FoodDicts.myFood
