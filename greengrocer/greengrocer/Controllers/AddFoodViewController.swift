@@ -14,8 +14,6 @@ class AddFoodViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     var newFood: Food = Food(category: "Grains", name: "ERROR", quantity: -1, price: -1)
     
     
-    @IBOutlet weak var foodGroupPicker: UIPickerView!
-    
     @IBOutlet weak var isShared: UISwitch!
     
     @IBOutlet weak var foodGroupText: UITextField!
@@ -105,28 +103,22 @@ class AddFoodViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        self.view.endEditing(true)
         return FoodDicts.categoryDict[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.foodGroupText.text = FoodDicts.categoryDict[row]
-        self.foodGroupPicker.isHidden = true
-    }
-    
-    @IBAction func textFieldDidBeginEditing(_ sender: Any) {
-        self.view.endEditing(true)
-        self.foodGroupPicker.isHidden = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let foodGroupPicker = UIPickerView()
+        foodGroupText.inputView = foodGroupPicker
         foodGroupPicker.delegate = self
         foodGroupPicker.dataSource = self
         
-        foodGroupPicker.isHidden = true
         quantityText.keyboardType = UIKeyboardType.decimalPad
-//        priceText.keyboardType = UIKeyboardType.decimalPad
+        priceText.keyboardType = UIKeyboardType.decimalPad
         
         openFridge.image = #imageLiteral(resourceName: "openfridge")
         

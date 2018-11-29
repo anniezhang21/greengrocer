@@ -275,13 +275,7 @@
                                         <color key="value" red="0.9290133248730964" green="0.9290133248730964" blue="0.9290133248730964" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="textFieldDidBeginEditing:" destination="PWb-kH-osE" eventType="editingDidBegin" id="J5o-IQ-F5b"/>
-                                </connections>
                             </textField>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3m-Ru-sbn">
-                                <rect key="frame" x="27.5" y="34" width="320" height="216"/>
-                            </pickerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yla-q3-or8">
                                 <rect key="frame" x="47.5" y="366" width="146.5" height="50"/>
                                 <subviews>
@@ -317,7 +311,6 @@
                             <constraint firstItem="gbG-u2-Ri1" firstAttribute="width" secondItem="jFT-N5-hL5" secondAttribute="width" id="VwF-Ci-1fW"/>
                             <constraint firstItem="Yla-q3-or8" firstAttribute="leading" secondItem="9Yp-tV-iLw" secondAttribute="leading" id="Xh6-xo-Bw1"/>
                             <constraint firstItem="9Yp-tV-iLw" firstAttribute="top" secondItem="rN7-bf-RnV" secondAttribute="top" constant="225" id="Xvs-5I-h03"/>
-                            <constraint firstItem="j3m-Ru-sbn" firstAttribute="firstBaseline" secondItem="gbG-u2-Ri1" secondAttribute="firstBaseline" constant="-114.5" id="YCV-kC-IV9"/>
                             <constraint firstItem="9Yp-tV-iLw" firstAttribute="centerX" secondItem="rN7-bf-RnV" secondAttribute="centerX" id="aH1-76-kdL"/>
                             <constraint firstItem="9Yp-tV-iLw" firstAttribute="width" secondItem="jFT-N5-hL5" secondAttribute="width" id="b5E-4h-04t"/>
                             <constraint firstItem="YPM-q4-LfS" firstAttribute="leading" secondItem="R4h-Eq-R5d" secondAttribute="leading" id="bCU-gT-9IL"/>
@@ -325,7 +318,6 @@
                             <constraint firstItem="rN7-bf-RnV" firstAttribute="trailing" secondItem="iuZ-ZB-6K4" secondAttribute="trailing" constant="9" id="h9V-v1-CUL"/>
                             <constraint firstItem="B0p-KF-ojk" firstAttribute="leading" secondItem="Yla-q3-or8" secondAttribute="trailing" constant="33" id="jXd-va-SBd"/>
                             <constraint firstItem="E82-Yg-9Lm" firstAttribute="centerX" secondItem="rN7-bf-RnV" secondAttribute="centerX" id="kxB-It-xXp"/>
-                            <constraint firstItem="j3m-Ru-sbn" firstAttribute="centerX" secondItem="rN7-bf-RnV" secondAttribute="centerX" id="pZe-yV-pa2"/>
                             <constraint firstItem="YOH-JE-Td3" firstAttribute="top" secondItem="rN7-bf-RnV" secondAttribute="top" constant="163" id="qaL-PF-iqF"/>
                             <constraint firstItem="YPM-q4-LfS" firstAttribute="centerX" secondItem="rN7-bf-RnV" secondAttribute="centerX" id="qcY-7V-OZo"/>
                             <constraint firstItem="Yla-q3-or8" firstAttribute="height" secondItem="9Yp-tV-iLw" secondAttribute="height" id="s5K-VF-iDK"/>
@@ -336,7 +328,6 @@
                     </view>
                     <connections>
                         <outlet property="confirm" destination="B0p-KF-ojk" id="TVb-ua-Dbf"/>
-                        <outlet property="foodGroupPicker" destination="j3m-Ru-sbn" id="jxf-CP-PHE"/>
                         <outlet property="foodGroupText" destination="gbG-u2-Ri1" id="7Md-NL-PWa"/>
                         <outlet property="isShared" destination="RQi-rn-lWn" id="0L6-ra-CKm"/>
                         <outlet property="itemNameText" destination="YOH-JE-Td3" id="TNd-ST-zO8"/>
@@ -752,6 +743,7 @@
                     <tabBarItem key="tabBarItem" title="My Budget" image="second" id="T9q-gT-Afz"/>
                     <connections>
                         <outlet property="pieChart" destination="Nlw-Yd-ovQ" id="vr9-pP-xnc"/>
+                        <outlet property="whiteRectangle" destination="wbc-Nu-UWn" id="ZGg-R0-6BW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UqG-wY-bFw" userLabel="First Responder" sceneMemberID="firstResponder"/>

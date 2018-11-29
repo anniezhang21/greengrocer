@@ -72,6 +72,7 @@ class SharedFoodViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        populateSharedFoods()
         self.sharedFoodTable.reloadData()
     }
     

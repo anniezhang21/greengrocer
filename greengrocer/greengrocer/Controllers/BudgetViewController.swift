@@ -11,6 +11,7 @@ import Charts
 
 class BudgetViewViewController: UIViewController {
     @IBOutlet weak var pieChart: PieChartView!
+    @IBOutlet weak var whiteRectangle: UIView!
     
     var fruitsDataEntry = PieChartDataEntry (value:0, label:"")
     var vegDataEntry = PieChartDataEntry (value:0, label:"")
@@ -25,7 +26,7 @@ class BudgetViewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        whiteRectangle.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
         pieChart.chartDescription?.text = nil
         
