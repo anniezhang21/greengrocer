@@ -11,6 +11,7 @@ class Food {
     
     var category: String
     var name: String
+    var owner: String = ""
     
     var quantity: Double
     var price: Double

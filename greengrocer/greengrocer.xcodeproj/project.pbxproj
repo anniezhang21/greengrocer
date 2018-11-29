@@ -28,6 +28,9 @@
 		EF73C1E3219CC077001527F9 /* OneCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF73C1E2219CC077001527F9 /* OneCategoryViewController.swift */; };
 		EF73C1E5219CCB24001527F9 /* OneCategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF73C1E4219CCB24001527F9 /* OneCategoryViewCell.swift */; };
 		EF85346C21AE8EB5002D599E /* greengrocer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF85346A21AE8EB5002D599E /* greengrocer.xcdatamodeld */; };
+		EF85348F21AF742C002D599E /* userCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF85348E21AF742C002D599E /* userCollectionViewCell.swift */; };
+		EF85349121AF772B002D599E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF85349021AF772B002D599E /* User.swift */; };
+		EF85349321AF7ED4002D599E /* EnterPasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF85349221AF7ED4002D599E /* EnterPasscodeViewController.swift */; };
 		EFA419AA218E5812006B40BD /* FoodGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA419A9218E5812006B40BD /* FoodGroupViewController.swift */; };
 		EFA419AC218E5B85006B40BD /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA419AB218E5B85006B40BD /* Food.swift */; };
 		EFA419AE218E5D88006B40BD /* FoodDicts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA419AD218E5D88006B40BD /* FoodDicts.swift */; };
@@ -86,6 +89,9 @@
 		EF73C1E2219CC077001527F9 /* OneCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCategoryViewController.swift; sourceTree = "<group>"; };
 		EF73C1E4219CCB24001527F9 /* OneCategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCategoryViewCell.swift; sourceTree = "<group>"; };
 		EF85346B21AE8EB5002D599E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		EF85348E21AF742C002D599E /* userCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF85349021AF772B002D599E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EF85349221AF7ED4002D599E /* EnterPasscodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasscodeViewController.swift; sourceTree = "<group>"; };
 		EFA419A9218E5812006B40BD /* FoodGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodGroupViewController.swift; sourceTree = "<group>"; };
 		EFA419AB218E5B85006B40BD /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		EFA419AD218E5D88006B40BD /* FoodDicts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDicts.swift; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 			children = (
 				EFA419AD218E5D88006B40BD /* FoodDicts.swift */,
 				EFA419AB218E5B85006B40BD /* Food.swift */,
+				EF85349021AF772B002D599E /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,6 +167,7 @@
 				EF30EA192193E4C600565AC5 /* LoginViewController.swift */,
 				EF5E8B42219CF8AE009E66C9 /* SignUpViewController.swift */,
 				EF65745A218E4EEF0073378F /* IntroViewController.swift */,
+				EF85349221AF7ED4002D599E /* EnterPasscodeViewController.swift */,
 				EFA419A9218E5812006B40BD /* FoodGroupViewController.swift */,
 				EF73C1E2219CC077001527F9 /* OneCategoryViewController.swift */,
 				EF65742E218E472C0073378F /* SecondViewController.swift */,
@@ -174,6 +182,7 @@
 			children = (
 				EF73C1E4219CCB24001527F9 /* OneCategoryViewCell.swift */,
 				EFA419AF218E5EA8006B40BD /* FoodGroupCollectionViewCell.swift */,
+				EF85348E21AF742C002D599E /* userCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -484,7 +493,9 @@
 				EF30EA2B2193F33E00565AC5 /* KaedeTextField.swift in Sources */,
 				EF30EA262193F2A100565AC5 /* TextFieldEffects.swift in Sources */,
 				EF30EA292193F2ED00565AC5 /* YoshikoTextField.swift in Sources */,
+				EF85348F21AF742C002D599E /* userCollectionViewCell.swift in Sources */,
 				EF30EA2D219908CC00565AC5 /* BudgetViewController.swift in Sources */,
+				EF85349321AF7ED4002D599E /* EnterPasscodeViewController.swift in Sources */,
 				EF85346C21AE8EB5002D599E /* greengrocer.xcdatamodeld in Sources */,
 				EF65742B218E472C0073378F /* AppDelegate.swift in Sources */,
 				EFA419B0218E5EA8006B40BD /* FoodGroupCollectionViewCell.swift in Sources */,
@@ -494,6 +505,7 @@
 				EFA419AA218E5812006B40BD /* FoodGroupViewController.swift in Sources */,
 				EFA419B2218EA0A6006B40BD /* AddFoodViewController.swift in Sources */,
 				EF65745B218E4EEF0073378F /* IntroViewController.swift in Sources */,
+				EF85349121AF772B002D599E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

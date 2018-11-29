@@ -30,8 +30,6 @@ class FoodGroupViewController: UIViewController, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let groupCell = collectionView.dequeueReusableCell(withReuseIdentifier: "groupCell", for: indexPath) as? FoodGroupCollectionViewCell {
             groupCell.layer.cornerRadius = 5;
-            // Add in image
-            
             groupCell.name.text = FoodDicts.categoryDict[indexPath.item]
             if let bgImage = FoodDicts.imageDict[indexPath.item] as? UIImage {
                 let View = UIView()
@@ -58,7 +56,7 @@ class FoodGroupViewController: UIViewController, UICollectionViewDataSource, UIC
         if let destinationVC = segue.destination as? OneCategoryViewController {
             if segue.identifier == "goToCategory" {
                 destinationVC.thisFoodGroup = self.groupToShow
-            } else if segue.identifier ==s "goToAll" {
+            } else if segue.identifier == "goToAll" {
                 destinationVC.thisFoodGroup = "All"
             }
         }

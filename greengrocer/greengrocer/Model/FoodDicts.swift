@@ -10,7 +10,16 @@ import Foundation
 import UIKit
 
 class FoodDicts {
-    static let housemates: [String: Int] = [:]
+    
+    // Temporary, delete default users when adding new users is implemented
+    static let testUser1 = User(name:"Annie", passcode: 1234)
+    static let testUser2 = User(name:"Jessica", passcode: 2345)
+    static let testUser3 = User(name:"Edward", passcode: 3456)
+    static let testUser4 = User(name:"Michelle", passcode: 4567)
+    
+    static let housemates: [User] = [testUser1, testUser2, testUser3, testUser4]
+    
+    static var currentUser: User = testUser1
     
     static let categoryDict: [Int:String] =
         [

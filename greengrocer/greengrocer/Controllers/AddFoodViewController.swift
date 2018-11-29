@@ -35,6 +35,8 @@ class AddFoodViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             newFood = Food(category: groupText, name: nameText, quantity: Double(quantText) ?? 0, price: Double(pText) ?? 0)
             newFood.shared = isShared.isOn
             newFood.dateAdded = Date.init()
+            newFood.owner = FoodDicts.currentUser.name
+            
             FoodDicts.myFood.append(newFood)
             if isShared.isOn {
                 // TODO: FireBase storage
