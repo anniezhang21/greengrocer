@@ -14,6 +14,7 @@ class OneCategoryViewCell: MGSwipeTableCell {
     @IBOutlet weak var number: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var dateAdded: UILabel!
+    @IBOutlet weak var categoryImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

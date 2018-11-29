@@ -86,7 +86,7 @@ class BudgetViewViewController: UIViewController {
         chartDataSet.valueFormatter = DefaultValueFormatter(formatter: noZeroFormatter)
         
         let chartData = PieChartData(dataSet: chartDataSet)
-        chartDataSet.colors = ChartColorTemplates.colorful()
+        chartDataSet.colors = ChartColorTemplates.joyful()
         pieChart.data = chartData
         
     }

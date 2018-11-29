@@ -1,33 +1,27 @@
 //
-//  OneCategoryViewController.swift
+//  SharedFoodViewController.swift
 //  greengrocer
 //
-//  Created by Annie Zhang on 11/14/18.
+//  Created by Annie Zhang on 11/28/18.
 //  Copyright © 2018 Annie Zhang. All rights reserved.
 //
 
 import UIKit
 import MGSwipeTableCell
 
-class OneCategoryViewController: UIViewController,  UITableViewDelegate, UITableViewDataSource {
+class SharedFoodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var thisFoodGroup: String = "All"
-    var allFoods = FoodDicts.myFood
-    var filteredFoodArray: [Food] = []
+    var sharedFoodArray: [Food] = []
     
-    @IBOutlet weak var foodTable: UITableView!
+    @IBOutlet weak var sharedFoodTable: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredFoodArray.count
+        return sharedFoodArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let foodCell = tableView.dequeueReusableCell(withIdentifier: "foodCell") as? OneCategoryViewCell {
-            var thisFood: Food = allFoods[indexPath.row]
-            if thisFoodGroup != "All" {
-                thisFood = filteredFoodArray[indexPath.row]
-            }
-            
+            let thisFood: Food = sharedFoodArray[indexPath.row]
             foodCell.name.text = thisFood.name
             if floor(thisFood.quantity) == thisFood.quantity {
                 foodCell.number.text = String(Int(thisFood.quantity))
@@ -40,7 +34,7 @@ class OneCategoryViewController: UIViewController,  UITableViewDelegate, UITable
             let padding = 15;
             
             let trash = MGSwipeButton(title: "Delete", backgroundColor: .red, padding: padding, callback: { (cell) -> Bool in
-                self.deleteFood(self.foodTable.indexPath(for: cell)!);
+                self.deleteFood(self.sharedFoodTable.indexPath(for: cell)!);
                 return false; //don't autohide to improve delete animation
             });
             
@@ -59,33 +53,37 @@ class OneCategoryViewController: UIViewController,  UITableViewDelegate, UITable
         }
     }
     
+    func populateSharedFoods() {
+        for food in FoodDicts.myFood {
+            if !sharedFoodArray.contains(where: {$0.dateAdded == food.dateAdded}) && food.shared {
+                sharedFoodArray.append(food)
+            }
+        }
+    }
+    
     func deleteFood(_ path: IndexPath) {
-        let toRemove: Food = filteredFoodArray[(path as NSIndexPath).row]
+        let toRemove: Food = sharedFoodArray[(path as NSIndexPath).row]
         
         //TODO: Delete permanently from CoreData
         
-        filteredFoodArray.remove(at: (path as NSIndexPath).row);
+        sharedFoodArray.remove(at: (path as NSIndexPath).row);
         FoodDicts.myFood = FoodDicts.myFood.filter {$0.dateAdded != toRemove.dateAdded }
-        allFoods = FoodDicts.myFood
-        foodTable.deleteRows(at: [path], with: .left);
+        sharedFoodTable.deleteRows(at: [path], with: .left);
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.sharedFoodTable.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        foodTable.delegate = self
-        foodTable.dataSource = self
-        populateFilteredFoods()
-        
+        sharedFoodTable.delegate = self
+        sharedFoodTable.dataSource = self
+        populateSharedFoods()
+
         // Do any additional setup after loading the view.
     }
     
-    func populateFilteredFoods() {
-        for food in allFoods {
-            if ((food.category.contains(thisFoodGroup) && !filteredFoodArray.contains(where: {$0.dateAdded == food.dateAdded})) || thisFoodGroup == "All") && !food.shared {
-                filteredFoodArray.append(food)
-            }
-        }
-    }
 
     /*
     // MARK: - Navigation

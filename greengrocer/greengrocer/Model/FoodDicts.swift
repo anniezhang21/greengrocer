@@ -33,6 +33,18 @@ class FoodDicts {
             7: "Other",
         ]
     
+    static let categoryImageDict: [String:UIImage] =
+        [
+            "Grains": #imageLiteral(resourceName: "grains"),
+            "Vegetables": #imageLiteral(resourceName: "vegetables"),
+            "Fruit": #imageLiteral(resourceName: "fruit"),
+            "Dairy": #imageLiteral(resourceName: "dairy"),
+            "Protein": #imageLiteral(resourceName: "protein"),
+            "Condiments": #imageLiteral(resourceName: "condiments"),
+            "Snacks": #imageLiteral(resourceName: "junk"),
+            "Other": UIImage(named: "fridge")!,
+            ]
+    
     static let imageDict: [Int:UIImage?] =
         [
             0: #imageLiteral(resourceName: "grains"),

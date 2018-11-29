@@ -39,7 +39,33 @@ class AddFoodViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             
             FoodDicts.myFood.append(newFood)
             if isShared.isOn {
-                // TODO: FireBase storage
+                // TODO: Replace with FireBase storage
+                
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                let context =  appDelegate.persistentContainer.viewContext
+                
+                let pfood = SavedFood(context: context)
+                pfood.category = newFood.category
+                pfood.dateAdded = newFood.dateAdded
+                pfood.marked = newFood.marked
+                pfood.name = newFood.name
+                pfood.price = newFood.price
+                pfood.quantity = newFood.quantity
+                pfood.shared = newFood.shared
+                
+                appDelegate.saveContext()
+                
+                // Uncomment to clear all stored data
+                //                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedFood")
+                //                let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+                //
+                //                do {
+                //                    try context.execute(deleteRequest)
+                //                } catch let error as NSError {
+                //                    print(error)
+                //                }
+                
+                
             } else {
                 // Local storage
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
