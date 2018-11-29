@@ -36,6 +36,9 @@ class OneCategoryViewController: UIViewController,  UITableViewDelegate, UITable
             }
             foodCell.categoryImage.image = FoodDicts.categoryImageDict[thisFood.category]
             
+            let daysSince = Int(round(thisFood.dateAdded.timeIntervalSinceNow / 86400 * -1))
+            foodCell.dateAdded.text = "Added " + String(daysSince) + " day(s) ago"
+            
             // Swipe functionality
             let padding = 15;
             

@@ -28,6 +28,8 @@ class SharedFoodViewController: UIViewController, UITableViewDelegate, UITableVi
             } else {
                 foodCell.number.text = String(thisFood.quantity)
             }
+            let daysSince = Int(round(thisFood.dateAdded.timeIntervalSinceNow / 86400 * -1))
+            foodCell.dateAdded.text = "Added " + String(daysSince) + " day(s) ago"
             foodCell.categoryImage.image = FoodDicts.categoryImageDict[thisFood.category]
             
             // Swipe functionality

@@ -79,6 +79,8 @@ class BudgetViewViewController: UIViewController {
     }
     
     func updateChartData() {
+//        let darkGreen = UIColor(red: 130/255.0, green: 139/255.0, blue: 124/255.0, alpha: 1.0)
+        
         let chartDataSet = PieChartDataSet(values: totalDataEntries, label: nil)
         
         let noZeroFormatter = NumberFormatter()
@@ -87,10 +89,22 @@ class BudgetViewViewController: UIViewController {
         chartDataSet.valueFormatter = DefaultValueFormatter(formatter: noZeroFormatter)
         
         let chartData = PieChartData(dataSet: chartDataSet)
-        chartDataSet.colors = ChartColorTemplates.joyful()
+        chartDataSet.colors = sunsetish
+        chartDataSet.entryLabelColor = UIColor.white
+        chartDataSet.valueTextColor = UIColor.white
         pieChart.data = chartData
         
     }
+    
+    let sunsetish: [UIColor] = [
+//        UIColor(red: 248/255.0, green: 202/255.0, blue: 153/255.0, alpha: 1.0),
+        UIColor(red: 252/255.0, green: 177/255.0, blue: 164/255.0, alpha: 1.0),
+        UIColor(red: 238/255.0, green: 139/255.0, blue: 154/255.0, alpha: 1.0),
+//        UIColor(red: 240/255.0, green: 162/255.0, blue: 223/255.0, alpha: 1.0),
+        UIColor(red: 193/255.0, green: 167/255.0, blue: 238/255.0, alpha: 1.0),
+        UIColor(red: 169/255.0, green: 188/255.0, blue: 252/255.0, alpha: 1.0),
+        UIColor(red: 161/255.0, green: 221/255.0, blue: 252/255.0, alpha: 1.0)
+    ]
     
     
     /*
