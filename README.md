@@ -8,6 +8,7 @@ GreenGrocer is an all-in-one app for housemates and roommates to manage grocerie
 ![adding food UI](https://github.com/anniezhang21/greengrocer/blob/master/readme-assets/main_ui.png "Adding food in GreenGrocer")
 ![login/signup UI](https://github.com/anniezhang21/greengrocer/blob/master/readme-assets/login_signup.png "Log in and Sign up")
 
+![main UI demo](https://github.com/anniezhang21/greengrocer/blob/master/readme-assets/main_demo.gif "Main Screen + Table Views")
 ![adding food demo](https://github.com/anniezhang21/greengrocer/blob/master/readme-assets/addfood_demo.gif "Adding food in GreenGrocer") 
 ![login/signup demo](https://github.com/anniezhang21/greengrocer/blob/master/readme-assets/login_demo.gif "Log in and Sign up")
 
