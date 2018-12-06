@@ -12,6 +12,8 @@ import UIKit
 class FoodDicts {
     
     // Temporary, delete default users when adding new users is implemented
+    static let fakeUser1 = User(name:"Error", passcode: 9999)
+    
     static let testUser1 = User(name:"Annie", passcode: 1234)
     static let testUser2 = User(name:"Jessica", passcode: 2345)
     static let testUser3 = User(name:"Edward", passcode: 3456)

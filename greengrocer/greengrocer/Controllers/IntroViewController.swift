@@ -12,28 +12,15 @@ class IntroViewController: UIViewController, UICollectionViewDelegate, UICollect
 
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var loadedFoods: [SavedFood] = []
+    var selectedUser: User = FoodDicts.fakeUser1
     
-    @IBOutlet weak var startStocking: UIButton!
     @IBOutlet weak var userCollection: UICollectionView!
     
-    @IBAction func viewTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: "toEnterPasscode", sender: UIButton())
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         fetchFoodFromCoreData()
-    }
-    
-    func fetchFoodFromCoreData() {
-        do {
-            loadedFoods = try context.fetch(SavedFood.fetchRequest())
-            for sfood in loadedFoods {
-                let currFood =  Food(category: sfood.category!, name: sfood.name!, quantity: sfood.quantity, price: sfood.price)
-                currFood.dateAdded = sfood.dateAdded!
-                currFood.marked = sfood.marked
-                currFood.shared = sfood.shared
-                FoodDicts.myFood.append(currFood)
-            }
-        }
-        catch {
-            print("Fetch failed! :(")
+        if let userCell = collectionView.dequeueReusableCell(withReuseIdentifier: "userCell", for: indexPath) as? userCollectionViewCell {
+            self.selectedUser = FoodDicts.housemates[indexPath.item]
+            performSegue(withIdentifier: "toEnterPasscode", sender: userCell)
         }
     }
     
@@ -56,24 +43,41 @@ class IntroViewController: UIViewController, UICollectionViewDelegate, UICollect
         return UICollectionViewCell()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? EnterPasscodeViewController {
+            destinationVC.selectedUser = self.selectedUser
+        }
+    }
+    
+    func fetchFoodFromCoreData() {
+        do {
+            loadedFoods = try context.fetch(SavedFood.fetchRequest())
+            for sfood in loadedFoods {
+                let currFood =  Food(category: sfood.category!, name: sfood.name!, quantity: sfood.quantity, price: sfood.price)
+                currFood.dateAdded = sfood.dateAdded!
+                currFood.marked = sfood.marked
+                currFood.shared = sfood.shared
+                FoodDicts.myFood.append(currFood)
+            }
+        }
+        catch {
+            print("Fetch failed! :(")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Do any additional setup after loading the view.
         userCollection.delegate = self
         userCollection.dataSource = self
-        
-        // Do any additional setup after loading the view.
-        startStocking.layer.cornerRadius = 10
-        startStocking.layer.shadowColor = UIColor.gray.cgColor;
-        startStocking.layer.shadowOpacity = 0.8;
-        startStocking.layer.shadowRadius = 5;
-        startStocking.layer.shadowOffset = CGSize(width: 8, height: 8)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*

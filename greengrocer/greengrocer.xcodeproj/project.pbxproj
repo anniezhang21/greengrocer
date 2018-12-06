@@ -24,9 +24,9 @@
 		EF657442218E472C0073378F /* greengrocerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF657441218E472C0073378F /* greengrocerTests.swift */; };
 		EF65744D218E472C0073378F /* greengrocerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65744C218E472C0073378F /* greengrocerUITests.swift */; };
 		EF65745B218E4EEF0073378F /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65745A218E4EEF0073378F /* IntroViewController.swift */; };
+		EF6B83DE21B9BB9B0021D4CA /* SharedFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6B83DD21B9BB9B0021D4CA /* SharedFoodViewController.swift */; };
 		EF73C1E3219CC077001527F9 /* OneCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF73C1E2219CC077001527F9 /* OneCategoryViewController.swift */; };
 		EF73C1E5219CCB24001527F9 /* OneCategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF73C1E4219CCB24001527F9 /* OneCategoryViewCell.swift */; };
-		EF78A8D821AF88DD0011DF87 /* SharedFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF78A8D721AF88DD0011DF87 /* SharedFoodViewController.swift */; };
 		EF85346C21AE8EB5002D599E /* greengrocer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF85346A21AE8EB5002D599E /* greengrocer.xcdatamodeld */; };
 		EF85348F21AF742C002D599E /* userCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF85348E21AF742C002D599E /* userCollectionViewCell.swift */; };
 		EF85349121AF772B002D599E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF85349021AF772B002D599E /* User.swift */; };
@@ -85,9 +85,9 @@
 		EF65744C218E472C0073378F /* greengrocerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = greengrocerUITests.swift; sourceTree = "<group>"; };
 		EF65744E218E472C0073378F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF65745A218E4EEF0073378F /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		EF6B83DD21B9BB9B0021D4CA /* SharedFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedFoodViewController.swift; sourceTree = "<group>"; };
 		EF73C1E2219CC077001527F9 /* OneCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCategoryViewController.swift; sourceTree = "<group>"; };
 		EF73C1E4219CCB24001527F9 /* OneCategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCategoryViewCell.swift; sourceTree = "<group>"; };
-		EF78A8D721AF88DD0011DF87 /* SharedFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFoodViewController.swift; sourceTree = "<group>"; };
 		EF85346B21AE8EB5002D599E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		EF85348E21AF742C002D599E /* userCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF85349021AF772B002D599E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 				EFA419A9218E5812006B40BD /* FoodGroupViewController.swift */,
 				EF73C1E2219CC077001527F9 /* OneCategoryViewController.swift */,
 				EFA419B1218EA0A6006B40BD /* AddFoodViewController.swift */,
-				EF78A8D721AF88DD0011DF87 /* SharedFoodViewController.swift */,
+				EF6B83DD21B9BB9B0021D4CA /* SharedFoodViewController.swift */,
 				EF30EA2C219908CC00565AC5 /* BudgetViewController.swift */,
 			);
 			path = Controllers;
@@ -497,7 +497,7 @@
 				EF85349321AF7ED4002D599E /* EnterPasscodeViewController.swift in Sources */,
 				EF85346C21AE8EB5002D599E /* greengrocer.xcdatamodeld in Sources */,
 				EF65742B218E472C0073378F /* AppDelegate.swift in Sources */,
-				EF78A8D821AF88DD0011DF87 /* SharedFoodViewController.swift in Sources */,
+				EF6B83DE21B9BB9B0021D4CA /* SharedFoodViewController.swift in Sources */,
 				EFA419B0218E5EA8006B40BD /* FoodGroupCollectionViewCell.swift in Sources */,
 				EF5E8B43219CF8AE009E66C9 /* SignUpViewController.swift in Sources */,
 				EFA419AC218E5B85006B40BD /* Food.swift in Sources */,
@@ -677,6 +677,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H63474353;
 				INFOPLIST_FILE = greengrocer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AnnieZhang.greengrocer;
@@ -692,6 +693,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H63474353;
 				INFOPLIST_FILE = greengrocer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AnnieZhang.greengrocer;

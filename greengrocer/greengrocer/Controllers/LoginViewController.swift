@@ -55,10 +55,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
 
-        // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        let user = Auth.auth().currentUser;
+        if (user != nil) {
+            // User is signed in.
+            sleep(1)
+            self.performSegue(withIdentifier: "loginToHome", sender: self)
+        }
+    }
+    
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
