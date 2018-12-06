@@ -47,7 +47,7 @@ class BudgetViewViewController: UIViewController {
     
     func updateValues() {
         for food in FoodDicts.myFood {
-            if !food.marked {
+            if !food.marked && (food.owner == FoodDicts.currentUser.name) {
                 if food.category == "Fruit" {
                     fruitsDataEntry.label = "Fruit"
                     self.fruitsDataEntry.value += food.price

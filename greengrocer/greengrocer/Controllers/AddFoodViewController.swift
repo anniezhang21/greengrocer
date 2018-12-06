@@ -50,18 +50,19 @@ class AddFoodViewController: UIViewController, UIPickerViewDataSource, UIPickerV
                 pfood.price = newFood.price
                 pfood.quantity = newFood.quantity
                 pfood.shared = newFood.shared
+                pfood.owner = newFood.owner
                 
                 appDelegate.saveContext()
                 
                 // Uncomment to clear all stored data
-                //                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedFood")
-                //                let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-                //
-                //                do {
-                //                    try context.execute(deleteRequest)
-                //                } catch let error as NSError {
-                //                    print(error)
-                //                }
+//                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedFood")
+//                let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+//
+//                do {
+//                    try context.execute(deleteRequest)
+//                } catch let error as NSError {
+//                    print(error)
+//                }
                 
                 
             } else {
@@ -77,7 +78,8 @@ class AddFoodViewController: UIViewController, UIPickerViewDataSource, UIPickerV
                 pfood.price = newFood.price
                 pfood.quantity = newFood.quantity
                 pfood.shared = newFood.shared
-                
+                pfood.owner = newFood.owner
+
                 appDelegate.saveContext()
                 
                 // Uncomment to clear all stored data

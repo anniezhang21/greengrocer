@@ -25,6 +25,7 @@
 		EF65744D218E472C0073378F /* greengrocerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65744C218E472C0073378F /* greengrocerUITests.swift */; };
 		EF65745B218E4EEF0073378F /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65745A218E4EEF0073378F /* IntroViewController.swift */; };
 		EF6B83DE21B9BB9B0021D4CA /* SharedFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6B83DD21B9BB9B0021D4CA /* SharedFoodViewController.swift */; };
+		EF6B83E021B9DF280021D4CA /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6B83DF21B9DF280021D4CA /* AddUserViewController.swift */; };
 		EF73C1E3219CC077001527F9 /* OneCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF73C1E2219CC077001527F9 /* OneCategoryViewController.swift */; };
 		EF73C1E5219CCB24001527F9 /* OneCategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF73C1E4219CCB24001527F9 /* OneCategoryViewCell.swift */; };
 		EF85346C21AE8EB5002D599E /* greengrocer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF85346A21AE8EB5002D599E /* greengrocer.xcdatamodeld */; };
@@ -86,6 +87,7 @@
 		EF65744E218E472C0073378F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF65745A218E4EEF0073378F /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		EF6B83DD21B9BB9B0021D4CA /* SharedFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedFoodViewController.swift; sourceTree = "<group>"; };
+		EF6B83DF21B9DF280021D4CA /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		EF73C1E2219CC077001527F9 /* OneCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCategoryViewController.swift; sourceTree = "<group>"; };
 		EF73C1E4219CCB24001527F9 /* OneCategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCategoryViewCell.swift; sourceTree = "<group>"; };
 		EF85346B21AE8EB5002D599E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -164,13 +166,14 @@
 		EF30EA1C2193F1C300565AC5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EF6B83DF21B9DF280021D4CA /* AddUserViewController.swift */,
 				EF30EA192193E4C600565AC5 /* LoginViewController.swift */,
 				EF5E8B42219CF8AE009E66C9 /* SignUpViewController.swift */,
 				EF65745A218E4EEF0073378F /* IntroViewController.swift */,
 				EF85349221AF7ED4002D599E /* EnterPasscodeViewController.swift */,
 				EFA419A9218E5812006B40BD /* FoodGroupViewController.swift */,
-				EF73C1E2219CC077001527F9 /* OneCategoryViewController.swift */,
 				EFA419B1218EA0A6006B40BD /* AddFoodViewController.swift */,
+				EF73C1E2219CC077001527F9 /* OneCategoryViewController.swift */,
 				EF6B83DD21B9BB9B0021D4CA /* SharedFoodViewController.swift */,
 				EF30EA2C219908CC00565AC5 /* BudgetViewController.swift */,
 			);
@@ -490,6 +493,7 @@
 				EF73C1E3219CC077001527F9 /* OneCategoryViewController.swift in Sources */,
 				EF73C1E5219CCB24001527F9 /* OneCategoryViewCell.swift in Sources */,
 				EF30EA2B2193F33E00565AC5 /* KaedeTextField.swift in Sources */,
+				EF6B83E021B9DF280021D4CA /* AddUserViewController.swift in Sources */,
 				EF30EA262193F2A100565AC5 /* TextFieldEffects.swift in Sources */,
 				EF30EA292193F2ED00565AC5 /* YoshikoTextField.swift in Sources */,
 				EF85348F21AF742C002D599E /* userCollectionViewCell.swift in Sources */,

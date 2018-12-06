@@ -62,7 +62,7 @@ class EnterPasscodeViewController: UIViewController {
         self.view.addGestureRecognizer(tapGesture)
         
         helloText.text = "Hello, " + selectedUser.name + "!"
-        
+        enteredPasscode.keyboardType = UIKeyboardType.decimalPad
     }
     
     @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {

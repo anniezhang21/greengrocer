@@ -8,11 +8,17 @@
 
 import UIKit
 import Firebase
+import CoreData
+
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
+     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    var loadedUsers: [SavedUser] = []
     
     var userEmail = ""
     var userPassword = ""
@@ -42,6 +48,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     alertController.addAction(defaultAction)
                     self.present(alertController, animated: true, completion: nil)
                 } else {
+                    self.fetchUsersFromCoreData()
                     self.performSegue(withIdentifier: "loginToHome", sender: UIButton.self)
                 }
             }
@@ -69,6 +76,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if (user != nil) {
             // User is signed in.
             sleep(1)
+            fetchUsersFromCoreData()
             self.performSegue(withIdentifier: "loginToHome", sender: self)
         }
     }
@@ -76,6 +84,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
+    }
+    
+    func fetchUsersFromCoreData() {
+        // Uncomment to clear all stored data
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedUser")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+        do {
+            try context.execute(deleteRequest)
+        } catch let error as NSError {
+            print(error)
+        }
+        
+//        do {
+//            loadedUsers = try context.fetch(SavedUser.fetchRequest())
+//            for suser in loadedUsers {
+//                let thisUser =  User(name: suser.name!, passcode: Int(suser.passcode))
+//                FoodDicts.housemates.append(thisUser)
+//            }
+//        }
+//        catch {
+//            print("Fetch failed! :(")
+//        }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

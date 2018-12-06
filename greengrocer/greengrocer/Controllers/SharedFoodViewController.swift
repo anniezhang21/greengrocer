@@ -40,12 +40,13 @@ class SharedFoodViewController: UIViewController, UITableViewDelegate, UITableVi
                 return false; //don't autohide to improve delete animation
             });
             
-            let edit = MGSwipeButton(title: "Edit", backgroundColor: .lightGray, padding: padding, callback: { (cell) -> Bool in
-                print("help how do I segue")
-                return true; //autohide
-            });
+//            let edit = MGSwipeButton(title: "Edit", backgroundColor: .lightGray, padding: padding, callback: { (cell) -> Bool in
+//                print("help how do I segue")
+//                return true; //autohide
+//            });
             
-            foodCell.rightButtons = [edit, trash]
+//            foodCell.rightButtons = [edit, trash]
+            foodCell.rightButtons = [trash]
             foodCell.rightSwipeSettings.transition = .border
             
             return foodCell

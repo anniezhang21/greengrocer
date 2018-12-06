@@ -19,9 +19,9 @@ class FoodDicts {
     static let testUser3 = User(name:"Edward", passcode: 3456)
     static let testUser4 = User(name:"Michelle", passcode: 4567)
     
-    static let housemates: [User] = [testUser1, testUser2, testUser3, testUser4]
+    static var housemates: [User] = [testUser1]
     
-    static var currentUser: User = testUser1
+    static var currentUser: User = fakeUser1
     
     static let categoryDict: [Int:String] =
         [

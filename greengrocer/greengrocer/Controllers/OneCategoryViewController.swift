@@ -8,9 +8,12 @@
 
 import UIKit
 import MGSwipeTableCell
+import CoreData
 
 class OneCategoryViewController: UIViewController,  UITableViewDelegate, UITableViewDataSource {
 
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     var thisFoodGroup: String = "All"
     var allFoods = FoodDicts.myFood
     var filteredFoodArray: [Food] = []
@@ -47,12 +50,13 @@ class OneCategoryViewController: UIViewController,  UITableViewDelegate, UITable
                 return false; //don't autohide to improve delete animation
             });
             
-            let edit = MGSwipeButton(title: "Edit", backgroundColor: .lightGray, padding: padding, callback: { (cell) -> Bool in
-                print("help how do I segue")
-                return true; //autohide
-            });
+//            let edit = MGSwipeButton(title: "Edit", backgroundColor: .lightGray, padding: padding, callback: { (cell) -> Bool in
+//                print("help how do I segue")
+//                return true; //autohide
+//            });
             
-            foodCell.rightButtons = [edit, trash]
+//            foodCell.rightButtons = [edit, trash]
+            foodCell.rightButtons = [trash]
             foodCell.rightSwipeSettings.transition = .border
             
             return foodCell
@@ -65,7 +69,22 @@ class OneCategoryViewController: UIViewController,  UITableViewDelegate, UITable
     func deleteFood(_ path: IndexPath) {
         let toRemove: Food = filteredFoodArray[(path as NSIndexPath).row]
         
-        //TODO: Delete permanently from CoreData
+        do {
+            let loadedFoods: [SavedFood] = try context.fetch(SavedFood.fetchRequest())
+            for sfood in loadedFoods {
+                if sfood.dateAdded == toRemove.dateAdded {
+                    context.delete(sfood)
+                }
+            }
+            do {
+                try context.save()
+            } catch {
+                // Do something... fatalerror
+            }
+        }
+        catch {
+            print("Fetch failed! :(")
+        }
         
         filteredFoodArray.remove(at: (path as NSIndexPath).row);
         FoodDicts.myFood = FoodDicts.myFood.filter {$0.dateAdded != toRemove.dateAdded }
@@ -84,7 +103,7 @@ class OneCategoryViewController: UIViewController,  UITableViewDelegate, UITable
     
     func populateFilteredFoods() {
         for food in allFoods {
-            if ((food.category.contains(thisFoodGroup) && !filteredFoodArray.contains(where: {$0.dateAdded == food.dateAdded})) || thisFoodGroup == "All") && !food.shared {
+            if ((food.category.contains(thisFoodGroup) && !filteredFoodArray.contains(where: {$0.dateAdded == food.dateAdded})) || thisFoodGroup == "All") && !food.shared && food.owner == FoodDicts.currentUser.name {
                 filteredFoodArray.append(food)
             }
         }

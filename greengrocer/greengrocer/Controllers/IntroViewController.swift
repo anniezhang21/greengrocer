@@ -14,8 +14,12 @@ class IntroViewController: UIViewController, UICollectionViewDelegate, UICollect
     var loadedFoods: [SavedFood] = []
     var selectedUser: User = FoodDicts.fakeUser1
     
+    @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var userCollection: UICollectionView!
     
+    @IBAction func didPressAddUser(_ sender: Any) {
+        performSegue(withIdentifier: "toAddHousemate", sender: self)
+    }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         fetchFoodFromCoreData()
         if let userCell = collectionView.dequeueReusableCell(withReuseIdentifier: "userCell", for: indexPath) as? userCollectionViewCell {
@@ -57,13 +61,20 @@ class IntroViewController: UIViewController, UICollectionViewDelegate, UICollect
                 currFood.dateAdded = sfood.dateAdded!
                 currFood.marked = sfood.marked
                 currFood.shared = sfood.shared
+                currFood.owner = sfood.owner ?? "None"
                 FoodDicts.myFood.append(currFood)
             }
+            print("number of food items: " + String(FoodDicts.myFood.count))
         }
         catch {
             print("Fetch failed! :(")
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        userCollection.reloadData()
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +82,12 @@ class IntroViewController: UIViewController, UICollectionViewDelegate, UICollect
         // Do any additional setup after loading the view.
         userCollection.delegate = self
         userCollection.dataSource = self
+        
+        addButton.layer.cornerRadius = 10
+        addButton.layer.shadowColor = UIColor.gray.cgColor;
+        addButton.layer.shadowOpacity = 0.5;
+        addButton.layer.shadowRadius = 3;
+        addButton.layer.shadowOffset = CGSize(width: 5, height: 5)
     }
     
     override func didReceiveMemoryWarning() {
